@@ -1,0 +1,216 @@
+$theme_color : crimson;
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-weight: bold;
+}
+html,body{
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100%;
+    padding-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+}
+a.nav_link{
+    margin: auto 10px;
+    transition: all 200ms;
+    &:hover{
+        color: $theme_color;
+    }
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+#site_logo{
+    color: $theme_color;
+    font-weight: 900;
+    font-size: 30px;
+}
+.message_box{
+    padding: 10px 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    &.error{
+        color: crimson;
+        background-color: rgba(220, 20, 60, 0.11);
+    }
+    &.success{
+        color: darkgreen;
+        background-color: rgba(0, 100, 0, 0.158);
+    }
+}
+.col-2{
+    display: flex;
+}
+main{
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    line-height: 1.3;
+}
+#page_title{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    h1{
+        color: $theme_color;
+        margin-bottom: 10px;
+        font-size: 60px;
+    }
+    p{
+        display: inline-block;
+        text-align: center;
+        max-width: 40%;
+        margin: 10px auto 0px;
+    }
+}
+#cards{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+    .card{
+        padding: 30px 30px 40px;
+        text-align: center;
+        transition: all 200ms;
+        max-width: 300px;
+        box-shadow: 0px 0px 10px rgba($color: #d7dde4, $alpha: 1.0);
+        margin: auto 10px;
+        .card_icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $theme_color;
+            color: white;
+            font-weight: 900;
+            font-size: 50px;
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            margin: 20px auto 30px;
+        }
+        &:hover{
+            box-shadow: 0px 8px 20px rgba($color: #d7dde4, $alpha: 1.0);
+            transform: translateY(-5px);
+        }
+    }
+}
+
+
+aside{
+    margin: auto;
+    max-width: 50%;
+    h1{
+        font-size: 50px;
+        color: $theme_color;
+        margin-bottom: 10px;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+    padding: 30px 20px 50px;
+    box-shadow: 0px 0px 20px rgba($color: #d7dde4, $alpha: 1.0);
+    margin: auto;
+    border-radius: 5px;
+    input{
+        margin-bottom: 10px;
+    }
+    h1{
+        margin-bottom: 20px;
+    }
+}
+form.login_form{
+    margin: 30px auto;
+}
+input[type='text'],input[type='email'],input[type='password'],input[type='number']{
+    padding: 8px 10px;
+    background-color: rgb(241, 241, 241);
+    outline: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+    &::placeholder{
+        color: rgb(219, 219, 219);
+    }
+    &:focus{
+        background-color: transparent;
+        border: 0.1px solid grey;
+    }
+}
+input[type='submit']{
+    width: 100px;
+    margin: auto;
+    background-color: $theme_color;
+    color: white;
+    text-shadow: 0px 1px 2px #2b2b2b;
+    border:none;
+    outline: none;
+    transition: all 200ms;
+    padding: 8px 0px;
+    &:hover{
+        background-color: darken($color: $theme_color, $amount: 5%);
+        cursor: pointer;
+    }
+}
+.button{
+    background-color: $theme_color;
+    display: inline-block;
+    padding: 8px 20px;
+    color: white;
+    text-shadow: 0px 1px 2px #2b2b2b;
+    border: none;
+    outline: none;
+    transition: all 200ms;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($color: $theme_color, $amount: 5%);
+    }
+}
+button.button{
+    margin-top: 20px;
+    font-size: 20px;
+}
+#suggest_signup{
+    text-align: center;
+    font-size: smaller;
+    // margin: 30px auto;
+    a{
+        color: $theme_color;
+    }
+}
+footer{
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    margin-top: -50px;
+    position: relative;
+    p {
+        text-align: center;
+        font-size: 14px;
+    }  
+}
