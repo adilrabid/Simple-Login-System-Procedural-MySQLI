@@ -17,5 +17,5 @@ else{
     // By Default includes the signup.tpl.php
     include 'signup.tpl.php';
 }
-    
+
 include 'footer.tpl.php';

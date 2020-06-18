@@ -11,4 +11,4 @@ session_unset();
 session_destroy();
  // ** session_destroy() - Destroys all the value in the session.
 
-header('location: ../index.php');
+header('location: ../');

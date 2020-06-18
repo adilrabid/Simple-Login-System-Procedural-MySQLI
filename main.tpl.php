@@ -3,13 +3,14 @@
     /*
         Template file : main.tpl.php
     */
-    
+
+    if(function_exists('logged_in')){  
 ?>
 
 <main>
     <div id="page_title">
-        <h1>A Simple Login System</h1>
-        <p>This is a sample and simple singn-up and login system using only PHP and MySQL for beginners</p>
+        <h1>You Are Logged In Now</h1>
+        <p>This is a sample and simple singn-up and login system using only PHP and MySQLI for beginners</p>
     </div>
     
     <div id='cards'>
@@ -27,3 +28,10 @@
         </div>
     </div>
 </main>  
+
+<?php
+
+} else {
+    // ** Redirect if someone manually typed the url
+    header('location: .');
+}

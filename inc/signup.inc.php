@@ -167,6 +167,6 @@ if (isset($_POST['submit_signup'])) {
     
 }else{
     // ** Redirects if the user somehow tricked and typed the url to get here.
-    header("Location: ../index.php");
+    header("location: ../");
     exit;
 }

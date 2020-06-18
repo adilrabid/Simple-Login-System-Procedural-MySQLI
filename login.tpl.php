@@ -9,7 +9,7 @@
 <form action="inc/login.inc.php" method = 'post' class ='login_form'>
     <h1>Log in</h1>
     <?php 
-        if (isset($_GET['err']) || isset($_GET['login'])) {
+        if ( isset($_GET['err']) ) {
             message_box($operation, $msg); 
         }
     ?>

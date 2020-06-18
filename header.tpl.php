@@ -18,7 +18,7 @@
         **  We are using this in order to determine if a user is logged in or not across different pages.
     */    
     
-    include 'inc/notific.inc.php';
+    include 'inc/alert.inc.php';
 
 ?>
 

@@ -80,6 +80,4 @@ $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 */
 if (!$connection) {
     die('Connectin failed! ' . mysqli_connect_error(). ":" .mysqli_connect_errno() );
-}else{
-    echo "connection established";
 }

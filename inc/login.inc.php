@@ -28,10 +28,11 @@ if (isset($_POST['submit_login'])) {
             $result = mysqli_stmt_get_result($statement);
             
             if ($record = mysqli_fetch_assoc($result)) {
+
                 $pass_check = password_verify($password, $record['pass']);
                 // ** password_verify() - Automatically hashes the password and try to match it to the hashed one.
                 
-                if ($pass_check == true) {
+                if ($pass_check) {
                     session_start();
                     // ** session_start() - starts the session.
 
@@ -44,11 +45,7 @@ if (isset($_POST['submit_login'])) {
                     header("Location: ../index.php?login=success");
                     exit;
 
-                } elseif($pass_check == false) {
-                    header("Location: ../index.php?login=1&err=wrong-password");
-                    exit;
-                } 
-                else {
+                } else {
                     header("Location: ../index.php?login=1&err=wrong-password");
                     exit;
                 }
@@ -63,6 +60,6 @@ if (isset($_POST['submit_login'])) {
     }
 
 } else {
-    header("Location: ../index.php");
+    header("Location: ../");
     exit;
 }

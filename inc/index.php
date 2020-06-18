@@ -1,6 +1,6 @@
 <?php
 
-header('Location: ../index.php');
+header('Location: ../');
 
 /* 
     **  When someone types an url only to the foldername, the the server tends to look for a file called index.php or index.html.

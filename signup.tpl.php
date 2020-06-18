@@ -24,7 +24,8 @@
             }
         ?>
         <input type="text" name='name' value = "<?= $typed_name;?>" placeholder = 'Your name'>
-        <input type="email" name='email_signup' value ="<?= $typed_email;?>" placeholder = 'Your email'>
+        <input type="text" name='email_signup' value ="<?= $typed_email;?>" placeholder = 'Your email'>
+         <!-- Didn't setted the type 'email', instead setted ot to 'text' to verify the email validation by PHP. -->
         <input type="password" name='pass_signup' placeholder = 'Type a password'>
         <input type="password" name='pass_repeat' placeholder = 'Confirm password'>
         <input type="submit" name='submit_signup' value = 'SIGN UP'>
